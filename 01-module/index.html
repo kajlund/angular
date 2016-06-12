@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Bootstrap our app by using the ng-app directive providing it with the name
+     of our module -->
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - Module Setup</title>
+        <link rel="stylesheet" href="../css/sample-styles.css">
+    </head>
+    <body>
+        <div class="info">
+            <h1>Sample 1 - Module Setup</h1>
+            <p>This sample shows how to set up an Angular application by declaring a module
+                by calling the angular module setter function and how to add a directive
+                that will bootstrap the angular application.</p>
+
+            <p>The Angular application will "live" under the node where the
+                <code>ng-app</code> directive is declared</p>
+            <p>Inspect the page to see how it is all done.</p>
+        </div>
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+    </body>
+</html>    
