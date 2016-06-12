@@ -1,0 +1,19 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.info {
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    background: #eee;
+    max-width: 50%;
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.info h1 {
+    color: #777;
+    text-align: center;
+}
