@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - Scope Binding</title>
+        <link rel="stylesheet" href="../css/sample-styles.css">
+    </head>
+    <body>
+        <div class="info">
+            <h1>Sample 3 - Scope Binding</h1>
+            <p>Angular architecture entails binding controller data to a view. This is done
+               via the built-in <code>$scope</code> object.</p>
+            <p>A <code>$scope</code> object is a JavaScript object with all sorts of goodies like
+                change detection for syncing our models and views.This happens via a thing called
+                <em>the digest cycle</em>.</p>
+            <p>At this point we just need to know that we can add properties to the <code>$scope</code>
+                object when we want to expose them to our views.</p>
+            <p>Inspect the page to see how it is all done.</p>
+        </div>
+
+        <!-- Inside the scope of our controller we can bind to controller's scope properties.
+             The Angular binding syntax uses double curly braces. Evaluate name in ManController scope -->
+        <div ng-controller="MainController">
+            {{name}}
+        </div>
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+        <script src="app/main.controller.js"></script>
+    </body>
+</html>
