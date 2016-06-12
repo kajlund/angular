@@ -1,4 +1,4 @@
-(function (app) {
+(function () {
     'use strict';
 
     /**
@@ -7,4 +7,4 @@
      */
     angular
         .module('app', []);
-}());
+})();
