@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - Module Setup</title>
+    </head>
+    <body>
+        <div class="info">
+            <h1>Sample 2 - Controller and Scope</h1>
+            <p>This sample demonstrates how to create a controller and
+                how to hook it up using the <code>ng-controller</code> directive.
+            <p>Inspect the page to see how it is all done.</p>
+        </div>
+
+        <!-- ng-controller directive declares a scope where you can access the assigned
+             controllers scope -->
+        <div ng-controller="MainController">
+
+        </div>
+
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+    </body>
+</html>    
