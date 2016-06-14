@@ -12,3 +12,22 @@
     color: #777;
     text-align: center;
 }
+
+.lbl {
+    font-size: 75%;
+    color: #777;
+}
+
+.ctrl {
+    background-color: #fff;
+    border: 1px solid tomato;
+    padding: 1em;
+    border-radius: 1rem;
+}
+
+.ctrl-child {
+    background-color: #fff;
+    border: 1px solid greenyellow;
+    padding: 1em;
+    border-radius: 1rem;
+}
