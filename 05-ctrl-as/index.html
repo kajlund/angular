@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - ControllerAs</title>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/sample-styles.css">
+    </head>
+    <body class="app">
+        <header class="header">
+            <img src="../img/angular-icon.png" class="logo">
+            <a href="/" class="brand">
+                AngularJS Demos
+            </a>
+        </header>
+        <div class="page">
+            <div class="info">
+                <h1>The Controller As syntax</h1>
+                <p>Since AngularJS 1.2+ it has been recommended that instead of attaching properties
+                    to the $scope object, we should instead use the ControllerAs syntax.</p>
+                <p>Think of the declaration <code>"MainController as main"</code> as a declaration like
+                    <code>var main = new MainController()</code> creating an alias for the controller that
+                    you use in your view.</p>
+                <p>Another plus of using this syntax is that you can separate parent/child controllers in a view
+                    by name. Also, you won't end up with a situation whereby a child controller property
+                    overwrites a parent controller property with the same name.</p>
+                <p>To get the most out of the samples view the source for comments</p>
+                <div ng-controller="MainController as main" class="ctrl">
+                    <p class="lbl">MainController</p>
+                    <div ng-controller="AnotherController as another" class="ctrl-child">
+                        <p class="lbl">AnotherController</p>
+                        MainController.name={{main.name}} while AnotherController.name={{another.name}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="footer-left">Copyright &copy; by luka, 2016</p>
+            <p class="footer-right"><i class="fa fa-code"></i> To get the most out of the samples, Inspect
+                source!</p>
+        </footer>
+
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+        <script src="app/main.controller.js"></script>
+        <script src="app/another.controller.js"></script>
+    </body>
+</html>    
