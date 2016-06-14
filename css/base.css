@@ -1,4 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 16px;
     color: #333;
+}
+
+.app {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.header {
+    align-items: center;
+    display: flex;
+    flex: none;
+    flex-direction: row;
+    min-height: 70px;
+    padding: 0 12px;
+}
+
+.logo {
+    max-height: 60px;
+}
+
+.brand {
+    color: #777;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.page {
+    /*display: flex;*/
+    flex: 1;
+}
+
+.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 75%;
+    border-top: 1px solid #ddd;
+    min-height: 60px;
+    padding: 0 12px;
+}
+
+.footer-left {
+    flex: 2 0 0;
+}
+
+.footer-left {
+    flex: 1 0 0;
 }
