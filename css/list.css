@@ -7,8 +7,8 @@
 .list-item {
     align-items: center;
     display: flex;
-    color: #555;
-    font-size: 14pt;
+    color: #ddd;
+    font-size: 1em;
     list-style-type: none;
     margin-left: 15px;
     margin-bottom: -1px;
