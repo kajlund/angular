@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - DI/Min</title>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/sample-styles.css">
+    </head>
+    <body>
+        <div class="info">
+            <h1>Dependency Injection and Minification</h1>
+            <p>By adding the dependencies we need as function params, AngularJS will insert
+            them at runtime. This is called dependency injection</p>
+
+            <p>Minifying your code would break dependency injection so we need to use the
+                $inject property and provide it with an array of our dependencies as strings. Strings
+                as opposed to function params names will not be minified and Angular can use these
+                strings and map them against the minified function param names.
+            </p>
+            <p>To get the most out of the samples view the source for comments</p>
+            <div ng-controller="MainController">
+                {{name}}
+            </div>
+        </div>
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+        <script src="app/main.controller.js"></script>
+    </body>
+</html>    
