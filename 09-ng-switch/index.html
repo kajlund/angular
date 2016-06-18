@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - ng-switch</title>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/sample-styles.css">
+    </head>
+    <body class="app">
+        <header class="header">
+            <img src="../img/angular-icon.png" class="logo">
+            <a href="/" class="brand">
+                AngularJS Demos
+            </a>
+        </header>
+        <div class="page">
+            <div class="info">
+                <h1>The ng-switch directive</h1>
+                <p>The <code>ng-switch</code> is a more powerful version of the ng-show/ng-hide directives.</p>
+                <p><pre>
+    var myVar = someExpression;
+    switch (myVar) {
+        case 'A':
+            // myVar = 'A'
+        case 'B':
+            // myVar = 'B'
+        default:
+           // if nothing else
+    }
+                </pre></p>
+
+                <div ng-controller="MainController as main">
+                    <ul>
+                        <li ng-repeat="movie in main.movies">
+                            <p># {{$index}} - {{movie.title}}</p>
+                            <p>Released in {{movie.year}}</p>
+                            <div ng-switch="movie.category">
+                                <div ng-switch-when="action">Action movie!</div>
+                                <div ng-switch-when="thriller">Thriller movie!</div>
+                                <div ng-switch-when="fantasy">Fantasy movie!</div>
+                                <div ng-switch-default>Movie has no category</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="footer-left">Copyright &copy; by luka, 2016</p>
+            <p class="footer-right"><i class="fa fa-code"></i> To get the most out of the samples, Inspect
+                source!</p>
+        </footer>
+
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+        <script src="app/main.controller.js"></script>
+    </body>
+</html>
