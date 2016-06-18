@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <title>Angular1 Demos - ng-if</title>
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/sample-styles.css">
+    </head>
+    <body class="app">
+        <header class="header">
+            <img src="../img/angular-icon.png" class="logo">
+            <a href="/" class="brand">
+                AngularJS Demos
+            </a>
+        </header>
+        <div class="page">
+            <div class="info">
+                <h1>The ng-if directive</h1>
+                <p>The <code>ng-if</code> directive is used for adding and removing DOM
+                   elements based on a truthy/falsy condition.</p>
+                <p>Any expression that can be evaluated as truthy or falsy is fine. I.e. You don't
+                    need to provide boolean expressions only to ng-show and ng-hide</p>
+                <p><code>ng-if</code> actually adds/removes DOM elements on the page. It does this by
+                commenting them out instead of actually removing them. The reason is that Angular would
+                otherwise need to keep track of <em>where</em> they should be added back.</p>
+
+                <div ng-controller="MainController as main">
+                    <ul>
+                        <li ng-repeat="movie in main.movies">
+                            <p># {{$index}} - {{movie.title}}</p>
+                            <p>Released in {{movie.year}}</p>
+                            <p ng-if="movie.popular">This movie is popular!</p>
+                            <p ng-if="movie.year > '2000'">This movie is quite new!</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p class="footer-left">Copyright &copy; by luka, 2016</p>
+            <p class="footer-right"><i class="fa fa-code"></i> To get the most out of the samples, Inspect
+                source!</p>
+        </footer>
+
+        <!-- Load Dependencies -->
+        <script src="../lib/angular.js"></script>
+        <!-- Load App -->
+        <script src="app/app.module.js"></script>
+        <script src="app/main.controller.js"></script>
+    </body>
+</html>
